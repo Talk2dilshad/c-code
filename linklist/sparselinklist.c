@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 struct node
 {
     int value;
@@ -8,9 +9,9 @@ struct node
 }
 
 //func to create node
-void node(struct node ** start, int non_zero_element , int row_index, int column_index)
+void node(struct node ** start, int non_zero_element , int row_index, int colomn_index)
 {   
-    struct node *temp;
+    struct node *temp, *r;
     temp= *start;
     if(temp== NULL)   
     {
@@ -18,7 +19,7 @@ void node(struct node ** start, int non_zero_element , int row_index, int column
         temp=(struct node*)malloc(sizeof(struct node));
         temp->value=non_zero_element;
         temp->row_position=row_index;
-        temp->colomn_position=column_index;
+        temp->colomn_position=colomn_index;
         temp->next=NULL;
         *start=temp;
     }
@@ -27,14 +28,27 @@ void node(struct node ** start, int non_zero_element , int row_index, int column
         while (temp->next != NULL) 
         temp = temp->next; 
         // Create new node dynamically 
-        r = (struct Node *) malloc (sizeof(struct Node)); 
+        r = (struct node*) malloc (sizeof(struct node)); 
         r->value = non_zero_element; 
         r->row_position = row_index; 
-        r->column_postion = column_index; 
+        r->colomn_position = colomn_index; 
         r->next = NULL; 
         temp->next = r;
     }
-    
+
+}
+void display(struct node* start)
+{
+    struct node* temp,*r,*s;
+    temp=r=s=start;
+    printf("row position :  ");
+    while(temp != NULL)
+    {
+        printf("%d ",temp->row_position);
+        temp=temp->next;
+    }
+    printf("\n");
+
 }
 int main()
 {
@@ -51,6 +65,19 @@ int main()
             scanf("%d",&sparse[i][j]);
         }
     }
-//  
+//  passing input to struct linklist sparse
+    for( int i = 0; i< m ; i++)
+    {
+        for (int j =0; j< n; j++)
+        {
+          //  passing value non-zero to func(node)
+          if(sparse[i][j] != 0)
+          {
+            node(&start,sparse[i][j],i,j);
+          }
+        }
+    }
+    // display sparse ...
+    display(start);
     return 0;
 }
