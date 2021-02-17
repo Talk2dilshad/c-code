@@ -38,19 +38,42 @@ char pop()
     }
      return x; 
 }
+int checkpair(char character1,char character2)
+{
+   if (character1 == '(' && character2 == ')') 
+        return 1; 
+    else if (character1 == '{' && character2 == '}') 
+        return 1; 
+    else if (character1 == '[' && character2 == ']') 
+        return 1; 
+    else
+        return 0; 
+}
 
 int balanced(char  *exp)
 {
-    for(int i=0;exp[i]!= '\0'; i++)
+    
+    for(int i=0 ; exp[i] != '\0'; i++)
     {
-        if(exp[i]=='(')
-            push(exp[i]);
-        else if(exp[i]==')')
-        {
-            if(top==NULL)
-                return 0;
-            pop();
-        }
+      if(exp[i]== '{' || exp[i]== '(' || exp[i]== '[' )  
+      {
+        push(exp[i]);
+      }
+       // If exp[i] is an ending bracket then pop from 
+        // stack and check if the popped bracket is a 
+        // matching pair*/
+         if(exp[i]== '}' || exp[i]== ')' || exp[i]== ']' )  
+      {
+        if(top==NULL)
+            return 0;
+            // Pop the top element from stack, if it is not 
+            // a pair bracket of character then there is a 
+            // mismatch. 
+            // his happens for expressions like {(})
+        else if(!checkpair(pop(),exp[i]))
+        return 0;
+      }
+    
     }
     if(top==NULL)
     return 1;
@@ -59,7 +82,7 @@ int balanced(char  *exp)
 }
 int main()
 {
-  char *exp="(a+b)*(c-d))";
+  char *exp="{[]()}";
   printf("%d ",balanced(exp));
     return 0;
 }
