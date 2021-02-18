@@ -80,7 +80,7 @@ int linearSearch(struct Array *arr,int key)
 int binarySearch(int a[],int l,int h,int key)
 {
   int mid=0;
-  if(l<=h)
+  if(l <= h)
   {
     mid=(l+h)/2;
     if(key==a[mid])
