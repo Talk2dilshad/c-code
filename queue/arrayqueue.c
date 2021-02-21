@@ -52,9 +52,9 @@ int main()
 
     create(&q);
 
-    enqueue(&q,101);
-    enqueue(&q,27837841);
-    enqueue(&q,301);
+    enqueue(&q,1);
+    enqueue(&q,2);
+    enqueue(&q,3);
     display(q);
 
  printf("Dequeue element -> %d \n",dequeue(&q));
