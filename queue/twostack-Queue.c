@@ -13,7 +13,7 @@ struct queue
     struct node* stack2;
 };
 
-void push(struct node** top,int x)
+void push(struct node** top,int x) // Push Element into stack as per func() order 
 {
     struct node* new_node= (struct node*) malloc(sizeof(struct node));
     if(new_node == NULL)
