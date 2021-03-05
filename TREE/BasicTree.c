@@ -47,9 +47,11 @@ void Treecreate()
             enqueue(&q,t);
         }
     }
-}    
+}  
+  
 void preorder(struct node *p)
 {
+    
     if(p)
     {
         printf("%d ",p->data);
@@ -58,11 +60,34 @@ void preorder(struct node *p)
     }
 }
 
+void inorder(struct node *p)
+{   
+    if(p)
+    {
+        inorder(p->lchild);
+        printf("%d ",p->data);
+        inorder(p->rchild);
+    }
+}
+
+void postorder(struct node *p)
+{
+    if(p)
+    {
+        postorder(p->lchild);
+        postorder(p->rchild);
+        printf("%d ",p->data);
+    }
+}
+
 int main()
 {
     Treecreate();
-
+    printf("\nPreOrder :  ");
     preorder(root);
-
+    printf("\nInOrder :  ");
+    inorder(root);
+    printf("\nPostOrder :  ");
+    postorder(root);
     return 0;
 }
