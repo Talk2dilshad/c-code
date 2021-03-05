@@ -60,7 +60,7 @@ int isEmpty(struct stack st)
 {
     if(st.top==-1)
      return 1;
-     return 0;
+    return 0;
 }
 int isFull(struct stack st)
 {

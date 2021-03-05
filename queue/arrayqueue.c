@@ -10,6 +10,8 @@ struct Queue
 };
 void create(struct Queue *q)
 {
+    printf("Enter the size of Queue : ");
+    scanf("%d",&q->size);
     q->Q=(int *)malloc(q->size*sizeof(int));
     q->front=q->rear= -1;
 }
@@ -47,9 +49,6 @@ void display(struct Queue q)
 int main()
 {
     struct Queue q;
-    printf("Enter the size of Queue : ");
-    scanf("%d",&q.size);
-
     create(&q);
 
     enqueue(&q,1);

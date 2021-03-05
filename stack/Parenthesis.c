@@ -69,7 +69,7 @@ int balanced(char  *exp)
             // Pop the top element from stack, if it is not 
             // a pair bracket of character then there is a 
             // mismatch. 
-            // his happens for expressions like {(})
+            // is happens for expressions like {(})
         else if(!checkpair(pop(),exp[i]))
         return 0;
       }
