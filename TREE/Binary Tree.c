@@ -31,7 +31,7 @@ void insert(int key)
             t=t->rchild;
         else
             return;         
-    }//after reaching point where should tree new node will be add the tailing node will help to add new node to this tree
+    }//after reaching end point of tree, new node will be added by the tailing node .
         p=(struct node *)malloc(sizeof(struct node));
         p->data=key;
         p->lchild=p->rchild=NULL;
