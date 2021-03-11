@@ -13,10 +13,10 @@ void insert(int key)
     struct node *t=root;
     // * r is tail pointer & *p create new node
     struct node *r,*p;
-       p=(struct node *)malloc(sizeof(struct node));
+        p=(struct node *)malloc(sizeof(struct node));
         p->data=key;
         p->lchild=p->rchild=NULL;
-        
+
     if(root==NULL)
     {
         root=p; //copy p data into root
