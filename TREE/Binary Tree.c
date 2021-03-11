@@ -50,13 +50,38 @@ void inorder(struct node *p)
         inorder(p->rchild);
     }
 }
+struct node *RecursiveInsertion(struct node *p,int key)
+{
+    struct node *t=NULL;//allocate memory add key to it and return it to root 
+    if(p==NULL)
+    {
+        t=(struct node *)malloc(sizeof(struct node));
+        t->data=key;
+        t->lchild=t->rchild=NULL;
+        return t;
+    }
+    if(key<p->data)
+        p->lchild=RecursiveInsertion(p->lchild,key);
+    else if(key > p->data)
+        p->rchild=RecursiveInsertion(p->rchild,key);
+
+    return p;
+
+}
+
 int main()
 {
-    insert(10);
-    insert(5);
-    insert(20);
-    insert(8);
-    insert(30);
+    //insert func is disabled for RecursiveInsert func()
+    // insert(10);
+    // insert(5);
+    // insert(20);
+    // insert(8);
+    // insert(30);
+    root=RecursiveInsertion(root,10);
+    RecursiveInsertion(root,5);
+    RecursiveInsertion(root,20);
+    RecursiveInsertion(root,8);
+    RecursiveInsertion(root,50);
 
     inorder(root);
     printf("\n");
