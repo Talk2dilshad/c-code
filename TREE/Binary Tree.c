@@ -13,12 +13,12 @@ void insert(int key)
     struct node *t=root;
     // * r is tail pointer & *p create new node
     struct node *r,*p;
-
-    if(root==NULL)
-    {
-        p=(struct node *)malloc(sizeof(struct node));
+       p=(struct node *)malloc(sizeof(struct node));
         p->data=key;
         p->lchild=p->rchild=NULL;
+        
+    if(root==NULL)
+    {
         root=p; //copy p data into root
         return;
     }
@@ -32,10 +32,7 @@ void insert(int key)
         else
             return;         
     }//after reaching end point of tree, new node will be added by the tailing node .
-        p=(struct node *)malloc(sizeof(struct node));
-        p->data=key;
-        p->lchild=p->rchild=NULL;
-
+       
     if(key< r->data )
         r->lchild=p;
     else
