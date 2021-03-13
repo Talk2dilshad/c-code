@@ -15,7 +15,7 @@ void substract(struct complex x,struct complex y)
     struct complex c;
     c.real=x.real-y.real;     //subtraction of real part
 	c.imag=x.imag-y.imag;     //subtraction of imaginary part
-	printf("Substraction of complex numbers: %.2lf%+.2lfi\n",c.real,c.imag);
+	printf("Substraction of complex numbers: %.2lf+%.2lfi\n",c.real,c.imag);
 }
 void multiply(struct complex x,struct complex y)
 {
