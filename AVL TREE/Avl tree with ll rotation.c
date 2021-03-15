@@ -156,14 +156,7 @@ void inorder(struct node *p)
         inorder(p->rchild);
     }
 }
-int  height(struct node *root)
-{
-    int x, y;
-    if(root==NULL) return 0;
-    x=height(root->lchild);
-    y=height(root->rchild);
-    return x>y ? x+1: y+1;
-}
+
 int main()
 {
     root=RecursiveInsertion(root,10);
