@@ -147,6 +147,88 @@ struct node *RecursiveInsertion(struct node *p,int key)
     return p;
 
 }
+int  height(struct node *root)
+{
+    int x, y;
+    if(root==NULL) return 0;
+    x=height(root->lchild);
+    y=height(root->rchild);
+    return x>y ? x+1: y+1;
+}
+
+struct node *InorderPre(struct node *p)
+{
+    while(p && p->rchild)
+    p=p->rchild;
+    return p;
+}
+struct node *InorderSucc(struct node *p){
+    while(p && p->lchild)
+    p=p->lchild;
+    return p;
+}
+
+// Recursive function to delete a node with given key 
+// from subtree with given root. It returns root of 
+// the modified subtree. 
+struct node  *delete(struct node* p, int key) 
+{ 
+    struct node *q; //store temporary data 
+	
+    if(p==NULL) return NULL;
+
+    if(p->lchild==NULL && p->rchild==NULL)
+    {
+        if(p==root)
+        root=NULL;
+        free(p);
+        return NULL;
+    }
+    if(key < p->data)
+        p->lchild=delete(p->lchild,key);
+    else if(key > p->data)
+        p->rchild=delete(p->rchild,key);
+    else
+    //searching and replacement of node by height 
+    if(height(p->lchild) > height(p->rchild))
+    {
+        q=InorderPre(p->lchild);
+        p->data=q->data;
+        p->lchild=delete(p->lchild,q->data);
+    }
+    else if(height(p->lchild) < height(p->rchild))
+    {
+        q=InorderPre(p->rchild);
+        p->data=q->data;
+        p->rchild=delete(p->rchild,q->data);
+    }
+    
+    // step 1 if the tree had only one node then return 
+    if(p==NULL)
+    return p;
+
+    // step 2 update the height of the current node
+    p->height=nodeheight(p);
+
+	// If this node becomes unbalanced, then there are 4 cases 
+
+	// Left Left Case 
+	if (balancefactor(p)> 1 && balancefactor(p->lchild) >= 0) 
+	return LLROTATION(p); 
+
+	else if(balancefactor(p)==2 && balancefactor(p->lchild)==-1)
+    return LRROTATION(p);
+    
+    else if(balancefactor(p)==-2 && balancefactor(p->rchild)==-1)
+    return RRROTATION(p);
+    
+    else if(balancefactor(p)==-2 && balancefactor(p->rchild)==1)
+    return RLROTATION(p);
+
+	return p; 
+} 
+
+
 void inorder(struct node *p)
 {
     if(p)
@@ -166,7 +248,7 @@ int main()
     RecursiveInsertion(root,28);
     RecursiveInsertion(root,27);
     RecursiveInsertion(root,5);
-
+    delete(root,10);
     inorder(root);
     return 0;
 }
