@@ -241,13 +241,15 @@ void inorder(struct node *p)
 
 int main()
 {
-    root=RecursiveInsertion(root,10);
-    RecursiveInsertion(root,20);
-    RecursiveInsertion(root,30);
-    RecursiveInsertion(root,25);
-    RecursiveInsertion(root,28);
-    RecursiveInsertion(root,27);
+    root=RecursiveInsertion(root,9);
     RecursiveInsertion(root,5);
+    RecursiveInsertion(root,10);
+    RecursiveInsertion(root,0);
+    RecursiveInsertion(root,6);
+    RecursiveInsertion(root,11);
+    RecursiveInsertion(root,-1);
+    RecursiveInsertion(root,1);
+    RecursiveInsertion(root,2);
     delete(root,10);
     inorder(root);
     return 0;
