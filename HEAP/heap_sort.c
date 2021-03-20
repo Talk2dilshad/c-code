@@ -24,21 +24,22 @@ void display(int a[],int size)
 int delete(int A[],int n)
 {
     int i,j,x,val,temp;
-    val=A[1];
-    x=A[n];    
-    A[1]=A[n];
-    A[n]=val;
+
+    val=A[1]; //store value of first element for sorting
+
+    A[1]=A[n]; //delete a[1] and change it with last index value 
+    A[n]=val;  //deleted element should be in heap that will help to form heap sort 
     i=1; j=i*2;
     while( j< n-1)
     {
         if(A[j+1] > A[j])
             j=j+1;
         if(A[i] < A[j])
-        {
+        {//swapping element..
             temp=A[i];
             A[i]=A[j];
             A[j]=temp;
-            i=j; j=j*2;
+            i=j; j*=2;
         }
         else
         break;
@@ -61,6 +62,6 @@ int main()
     }
     display(heap,size);
 
-
+    printf("\n\n\nThank You");
     return 0;
 }
