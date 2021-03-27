@@ -29,32 +29,37 @@ void bubbleSort(int *a,int n) {
    bool swapped = false;
    
    // loop through all numbers 
-   for(i = 0; i < n-1; i++) { 
+   for(i = 0; i < n-1; i++) 
+   { 
       swapped = false;
 		
       // loop through numbers falling ahead 
-      for(ptr = 0; ptr < n-1-i; ptr++) {
+      for(ptr = 0; ptr < n-1-i; ptr++)
+      {
          printf("     Items compared: [ %d, %d ] ", a[ptr],a[ptr+1]);
 
          // check if next number is lesser than current no
          //   swap the numbers. 
          //  (Bubble up the highest number)
 			
-         if(a[ptr] > a[ptr+1]) {
+         if(a[ptr] > a[ptr+1])
+         {
             temp = a[ptr];
             a[ptr] = a[ptr+1];
             a[ptr+1] = temp;
 
             swapped = true;
             printf(" => swapped [%d, %d]\n",a[ptr],a[ptr+1]);
-         } else {
+         } 
+         else
+         {
             printf(" => not swapped\n");
          }
 			
       }
 
       // if no number was swapped that means 
-       //   array is sorted now, break the loop. 
+      //   array is sorted now, break the loop. 
       if(!swapped) {
          break;
       }
