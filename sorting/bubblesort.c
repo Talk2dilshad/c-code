@@ -82,7 +82,8 @@ int main()
         scanf("%d", &A[i]);
     }
 
-    printf("The unsorted array is : \n");
+    printf("The unsorted array is : ");
+    display(A,length);
     bubbleSort(A,length);
     display(A,length);
     return 0;
