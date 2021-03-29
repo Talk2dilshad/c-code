@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+// selection sort is neither adaptive nor stable
 void SelectionSort(int arr[],int size)
 {
     int j,k;
