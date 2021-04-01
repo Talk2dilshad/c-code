@@ -41,8 +41,15 @@ void display(int a[],int n)
 }
 int main()
 {
-    int arr[]={11,13,7,12,16,9,24,5,10,3};
-    int size=sizeof(arr)/sizeof(arr[0]);
+    int size; 
+    printf("Enter the number of elements want to be sorted: ");
+    scanf("%d",&size);
+    int arr[size];
+    for(int i= 0; i< size; i++)
+    scanf("%d",&arr[i]);
+
+
+    
     quicksort(arr,0,size);
     display(arr,size);
     return 0;
