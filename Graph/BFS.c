@@ -26,6 +26,21 @@ void BFS(int g[][7],int start,int n)
     }
 
 }
+void DFS(int g[][7],int start,int n) 
+{
+    static int visited[7]={0};
+    int j;
+    if(visited[start]==0)
+    {
+        printf("%d  ",start);
+        visited[start]=1;
+        for(j=1;j<n;j++)
+        {
+            if(g[start][j]==1 && visited[j]==0)
+            DFS(g,j,n);
+        }
+    }
+}
 
 int main()
 {
@@ -38,6 +53,7 @@ int main()
  {0,0,0,0,1,0,0},
  {0,0,0,0,1,0,0}};
  
- BFS(G,6,7);
+// BFS(G,6,7);  remove comment to use bfs search 
+ DFS(G,6,7);
  return 0;
 }
