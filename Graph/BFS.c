@@ -3,19 +3,19 @@
 
 void BFS(int g[][7],int start,int n)
 {
-    int i=start,v;
+    int source_node=start,v;
 
     int visited[7]={0};
-    printf("%d",i);
-    visited[i]=1;
-    enqueue(i);
+    printf("%d",source_node);
+    visited[source_node]=1;
+    enqueue(source_node);
 
     while(!isEmpty())
     {
-        i=dequeue();
+        source_node=dequeue();
         for(v=1;v<n;v++)
         {
-            if(g[i][v]==1 && visited[v]==0)
+            if(g[source_node][v]==1 && visited[v]==0)
             {
                 printf("%d",v);
                 visited[v]=1;
@@ -54,6 +54,6 @@ int main()
  {0,0,0,0,1,0,0}};
  
 // BFS(G,6,7);  remove comment to use bfs search 
- DFS(G,6,7);
+ DFS(G,1,7);
  return 0;
 }
