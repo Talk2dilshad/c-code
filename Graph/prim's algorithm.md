@@ -5,7 +5,7 @@
 ## ***Introduction to graph traversal***
 
 > The process of visiting and exploring a graph for processing is called graph traversal. To be more specific it is all about visiting and exploring each vertex and edge in a graph such that all the vertices are explored exactly once.
-![Screenshot (3)](/assets/Screenshot%20(3).png)
+
 ----------
 
      How does Prim’s Algorithm Work?
