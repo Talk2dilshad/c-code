@@ -38,12 +38,12 @@ A Vector container in STL provides us with various useful functions.
     Modifer
 
 > push_back(): The function pushes the elements into a vector from the back. If the type of object passed as a parameter in the push_back() is not same as that of the vector an exception is thrown.  
-assign(): It assigns a new value to the vector elements by replacing old ones.
-pop_back(): The pop_back() function is used to pop or remove elements from a vector from the back. It reduces the size of the vector by one element.
-insert(): This function inserts new elements before the element before the position pointed by the iterator. We can also pass a third argument count, that counts the number of times the element is to be inserted before the pointed position.
-erase(): erase() function is used to remove elements from a container from the specified position or range. We can either pass the position of the specific elements needs need to remove or we can pass the starting point and endpoint of a range of elements.
-swap(): swap() function is used to swap the contents of one vector with another vector of the same type. Sizes may differ.
-clear(): clear() function is used to remove all the elements of the vector container
+>assign(): It assigns a new value to the vector elements by replacing old ones.
+>pop_back(): The pop_back() function is used to pop or remove elements from a vector from the back. It reduces the size of the vector by one element.
+>insert(): This function inserts new elements before the element before the position pointed by the iterator. We can also pass a third argument count, that counts the number of times the element is to be inserted before the pointed position.
+>erase(): erase() function is used to remove elements from a container from the specified position or range. We can either pass the position of the specific elements needs need to remove or we can pass the starting point and endpoint of a range of elements.
+>swap(): swap() function is used to swap the contents of one vector with another vector of the same type. Sizes may differ.
+>clear(): clear() function is used to remove all the elements of the vector container
 
 ## Iterators
 
