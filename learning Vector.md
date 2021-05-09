@@ -55,3 +55,26 @@ A Vector container in STL provides us with various useful functions.
 
 >begin(): This function returns an iterator pointing to the first element in the vector.
 >end(): The end() function returns an iterator pointing to the last element in the vector.
+----------
+*Example*
+
+```c++
+#include <iostream> 
+#include <vector> 
+   
+using namespace std; 
+   
+int main() 
+{ 
+    vector<int> vec1; 
+   
+    for (int i = 1; i <= 10; i++) 
+    vec1.push_back(i); 
+   
+    cout << "Understanding begin() and end() function: " << endl; 
+    for (auto i = vec1.begin(); i != vec1.end(); ++i) 
+    cout << *i << " "; 
+ 
+    return 0; 
+}
+```
