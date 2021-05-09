@@ -78,3 +78,16 @@ int main()
     return 0; 
 }
 ```
+
+----------
+    Capacity
+
+1. size(): This function returns the number of element in the vector.
+
+1. max_size(): The max_size() function returns the maximum number of elements that the vector can hold.
+
+1. capacity(): The capacity() function returns the size of the storage space currently allocated to the vector expressed as number of elements based on the memory allocated to the vector.
+
+1. resize(): This function resizes the container so that it contains ‘n’ elements. If the current size of the vector is greater than n then the back elements are removed from the vector and id the current size is smaller than n then extra elements are inserted at the back of the vector.
+
+1. empty(): Returns whether the container is empty, it return true if vector is empty else returns false.

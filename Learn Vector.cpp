@@ -69,4 +69,20 @@ int main()
     cout << "\n\nVector (2) :  "; 
     for (int i = 0; i < obj2.size(); i++) 
     cout << obj2[i] << " "; 
+
+	//---------------------------------   Iterator  ------------------------------
+
+	vector <int> vec1;
+	//inserting element
+	for(auto i=0; i<10; i++)
+	vec1.push_back(i);
+
+	cout<<"Understanding Begin() and End() func() : "<<endl;
+	//display
+	for(auto i=vec1.begin(); i !=vec1.end(); i++)
+	cout<<*i<<" ";
+
+	//-----------------------------------   CAPACITY  ----------------------------
+
+	
 }
