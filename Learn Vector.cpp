@@ -84,5 +84,20 @@ int main()
 
 	//-----------------------------------   CAPACITY  ----------------------------
 
-	
+	//using vec1 
+
+	cout<<"\nSize of our vector :   "<<vec1.size();
+
+	cout<<"\nCapacity of our vector :  "<<vec1.capacity();
+
+	cout<<"\nMax_size of our vector : "<<vec1.max_size();
+
+	vec1.resize(4);
+	cout<<"\nSize of our vector after resize :  "<<vec1.size();
+
+	//check if the vector is empty or not
+	if(vec1.empty())
+	cout<<"\n Empty ";
+	else
+	cout<<"\nVector is not empty";
 }
