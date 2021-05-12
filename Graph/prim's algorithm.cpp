@@ -41,7 +41,7 @@ void findMST(int graph[v][v])
 			// constraints to relax
 			// 1.Edge is present from U to j.
 			//  2.Vertex j is not included in MST
-			//  3.Edge weight is smaller than current edge weight
+			//  3.Edge weight( eg. graph[][] ) is smaller than current edge weight
 			if(graph[u][j] !=0 && setMST[j] == false && graph[u][j] < value[j])
 			{
 				value[j]=graph[u][j];
