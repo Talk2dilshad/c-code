@@ -9,7 +9,9 @@
 ### 2nd step
 
 >1.pick up the smallest edge
+
 >2.check if adding the edge forms cycle
+
 >3.if cycle's formed then include edge else discard the edge.
 
 #### 3rd Step
