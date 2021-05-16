@@ -4,3 +4,7 @@
     The chaining is defined by a parent child relationship.
 
 ![Screenshot (20)](/assets/Screenshot%20(20).png)
+
+## Find Operation in disjoint set
+
+![Screenshot (21)](/assets/Screenshot%20(21).png)
