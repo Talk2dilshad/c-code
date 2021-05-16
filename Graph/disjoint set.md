@@ -8,3 +8,7 @@
 ## Find Operation in disjoint set
 
 ![Screenshot (21)](/assets/Screenshot%20(21).png)
+
+### Union of two sets
+
+![Screenshot (22)](/assets/Screenshot%20(22).png)
