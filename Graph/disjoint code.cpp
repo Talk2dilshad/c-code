@@ -50,6 +50,6 @@ int main()
 	if(isCycle(edge_list))
 	cout<<"\nTrue\n";
 	else
-	cout<<"\False\n";
+	cout<<"\nFalse\n";
 }
 // time complexity => O(e.v)
