@@ -18,7 +18,7 @@ class Node
     int data;
     Node* next;
 };
-void push(Node** head,int new_DATA,int n)
+void push(Node** head,int new_DATA)
 {
     Node* new_node= new Node();
     new_node->data=new_DATA;
