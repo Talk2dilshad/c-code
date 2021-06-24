@@ -3,18 +3,17 @@ using namespace std;
 
 class solution{
 	public:
+	const long long int mod =1000000007;
 	long long int nth_fibo(long long int n)
 	{
-double golden_ratio=1.618034;
-        int f[6]={0,1,1,2,3,5};
-        if(n<6) return f[n];
-        
-        int t=5;long int fn=5;
-        while(t<n)
-        {
-            fn=round(fn*golden_ratio);t++;
-        }
-        return fn;
+		// prestoring
+		long long int dp[n+5];
+		dp[0]=0;
+		dp[1]=1;
+		for(int i=2; i<=n; i++)
+		// same as fibonacci formula f(i) = f(i-1) +f(i-2)
+		dp[i]=(dp[i-1]%mod +dp[i-2]%mod)%mod;
+		return dp[n];
 	}
 };
 
