@@ -4,7 +4,8 @@ using namespace std;
 
 // Unique pointer
 // if object is created and unique ptr p1 is pointing to this one object then only one pointer can point this object one at a time. So we can't share with another pointer, but we can transfer control to pointer p2 if ptr 1 is removed...
-
+// unique_ptr<A> ptr1 (new A);
+// Error: can't copy unique_ptr => unique_ptr<A> ptr2 = ptr1; 
 class rectangle
 {
 	int breadth,length;
