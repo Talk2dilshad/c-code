@@ -26,5 +26,5 @@ int main()
 	geeks Default;
 	cout<<"Default id value "<<Default.id<<endl;
 	geeks parameterized(6);
-	cout<<"Parameterized value "<<parameterized.id<<endl;
+	cout<<"Parameterized id value "<<parameterized.id<<endl;
 }
