@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+//What is a copy constructor? 
+//A copy constructor is a member function that initializes an object using another object of the same class. A copy constructor has the following general function prototype: 
 
+//ClassName (const ClassName &old_obj);
 class point
 {
 	//private data member
