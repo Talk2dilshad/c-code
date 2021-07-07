@@ -3,9 +3,10 @@ using namespace std;
 
 class point
 {
+	//private data member
 	int x,y;
 	public :
-	point(int x1,int y1)
+	point(int x1,int y1)//public member function can access private data member radius
 	{
 		x=x1;
 		y=y1;
