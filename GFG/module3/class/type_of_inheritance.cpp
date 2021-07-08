@@ -16,7 +16,7 @@ class subclass_name : access_mode base_class1, access_mode base_class2, ....
   //body of subclass
 };
 
-
+Hierarchical Inheritance: In this type of inheritance, more than one sub class is inherited from a single base class. i.e. more than one derived class is created from a single base class.
 */
 
 //Multilevel Inheritance: In this type of inheritance, a derived class is created from another derived class.
