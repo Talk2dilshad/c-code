@@ -17,6 +17,7 @@ class Solution{
        for(int i=0;i<sizeof_array; i++)
        {
          long long int n=arr[i];
+		 // if xor of no. led to increament in no. then it is even else odd(in case of odd there is decrement)
          if ((n^1)==n+1)
 		  count_even++;
           else count_odd++;
