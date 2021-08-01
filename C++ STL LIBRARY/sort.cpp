@@ -31,7 +31,9 @@ int main()
 	show(arr,size);
 	sort(arr,arr+size);
 	show(arr,size);
-
-
+	cout<<"binary search using STL Library \n"<<endl;
+	if(binary_search(arr,arr+size,2))
+	cout<<"Element found ";
+	else cout<<"Element not found";
 }
 
