@@ -28,7 +28,7 @@ void insert(struct Array *arr,int index,int x)
 {
   if(index>=0 && index <= arr->length)
   {
-      for(int i=arr->length;i>index;i--)
+      for(int i=arr->length;i>index;i--)// element are moving to make space 
       {
         arr->Ar[i]=arr->Ar[i-1];
       }
