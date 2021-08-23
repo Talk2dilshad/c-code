@@ -36,7 +36,7 @@ void bubbleSort(int *a,int n) {
       // loop through numbers falling ahead 
       for(ptr = 0; ptr < n-1-i; ptr++)
       {
-         printf("     Items compared: [ %d, %d ] ", a[ptr],a[ptr+1]);
+        // printf("     Items compared: [ %d, %d ] ", a[ptr],a[ptr+1]);
 
          // check if next number is lesser than current no
          //   swap the numbers. 
@@ -49,11 +49,11 @@ void bubbleSort(int *a,int n) {
             a[ptr+1] = temp;
 
             swapped = true;
-            printf(" => swapped [%d, %d]\n",a[ptr],a[ptr+1]);
+          //  printf(" => swapped [%d, %d]\n",a[ptr],a[ptr+1]);
          } 
          else
          {
-            printf(" => not swapped\n");
+         //    printf(" => not swapped\n");
          }
 			
       }
@@ -64,7 +64,7 @@ void bubbleSort(int *a,int n) {
          break;
       }
       
-      printf("Iteration %d#: ",(i+1)); 
+   //   printf("Iteration %d#: ",(i+1)); 
       display(a,n);
    }
 }
